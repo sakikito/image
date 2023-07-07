@@ -15,14 +15,14 @@ def get_write_dir_path():
 
 get_write_dir_path()
 
-image_num = int(input("画像数: ")) + 1
+image_num = int(input("画像数: "))
 
-for i in range(1,image_num):
+for i in range(1,image_num+1):
 
-    img = cv2.imread(f"read_image\img ({str(i)}).jpg")
+    img = cv2.imread(f"read_image\img ({str(i+1)}).jpg")
 
     size = (600,400)
 
     img_resize = cv2.resize(img,size)
 
-    cv2.imwrite("write_image\resize_{}".format(i), img_resize)
+    cv2.imwrite(f"write_image\resize_{i+1}", img_resize)
