@@ -4,7 +4,7 @@ import numpy as np
 
 img_num = int(input("画像数: "))
 
-for i in range(1, img_num+1):
+for i in range(0, img_num+1):
 
     img = cv2.imread(f"image_{i+1}.jpg")
     img_array = np.asarray(img)
